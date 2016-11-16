@@ -1,0 +1,17 @@
+canvas {
+  border: 1px solid black;
+
+
+}
+
+.row {
+  width: 100%;
+}
+
+@media (min-width: 400px) {
+  .container {
+    
+  }
+
+
+}
