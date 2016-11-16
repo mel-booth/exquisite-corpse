@@ -3,27 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>draw</title>
-    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/skeleton.css" rel="stylesheet" type="text/css">
 
   </head>
   <body>
+    <div class="container">
+      <canvas id="paper" width="500" height="400"></canvas>
+    </div>
 
-    <form id="tools">
-      <button type="submit" name="button">Pencil</button>
-      <button type="submit" name="button">Eraser</button>
-      <button type="submit" name="button">Clear</button>
-    </form>
+    <div class="container">
+      <div class="row">
+        <div class="three columns form-container">
+          <form id="tools">
+            <button type="submit" name="button">Pencil</button>
+            <button type="submit" name="button">Eraser</button>
+            <button type="submit" name="button">Clear</button>
+          </form>
 
-    <form id="options">
-      <button type="submit" name="button">Cancel</button>
-      <button  onClick="saveCanvas();" id="Save">Done</button>
-    </form>
+          <form id="options">
+            <button type="submit" name="button">Cancel</button>
+            <button  onClick="saveCanvas();" id="Save">Done</button>
+          </form>
+
+
+        </div>
+        <div class="nine columns gallery">
+
+        </div>
+
+      </div>
+
+    </div>
 
 
 
-    <canvas id="paper1" width="500" height="400"></canvas>
+
+
 
   </body>
-  <script type="text/javascript" src='paper.js'></script>
+  <script type="text/javascript" src='script/paper.js'></script>
 
 </html>

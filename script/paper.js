@@ -1,9 +1,7 @@
-var images = []
-
 var canvas = document.getElementById('paper')
-    canvas.width = window.innerWidth * 0.2
-    canvas.height = window.innerHeight * 0.4
 var context = canvas.getContext('2d')
+
+var images = []
 
 var mouse = {x: 0, y: 0};
 var test = document.createElement('img')
