@@ -11,28 +11,25 @@
   </head>
 
   <body onload="init()">
-    <!-- <div class="container"> -->
-      <div id="draw">
-
-        <div class="draw">
+    <div class="container draw">
+      <div class="row">
+        <div class="three column">
           <canvas id="paper" height="300" width="400"></canvas>
           <input type="submit" value="Draw" onclick="clearCanvas(canvas,ctx);">
           <input type="submit" value="Erase" onclick="clearCanvas(canvas,ctx);">
           <input type="submit" value="Clear" onclick="clearCanvas(canvas,ctx);">
-
           <input type="submit" value="Cancel" onclick="clearCanvas(canvas,ctx);">
           <input type="submit" value="Done" onclick="saveCanvas()">
         </div>
-
-        <div class="canvas">
-
+        <div class="nine column gallery">
+          <h1>GALLERY OF IMAGES</h1>
         </div>
-      <!-- </div> -->
+      </div>
     </div>
   </body>
 
-<!-- <script type="text/javascript" src='script/paper.js'></script> -->
-<script type="text/javascript" src='script/other.js'></script>
+<script type="text/javascript" src='script/paper.js'></script>
+<!-- <script type="text/javascript" src='script/other.js'></script> -->
 
 
 </html>

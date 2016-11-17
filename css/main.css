@@ -10,7 +10,7 @@ canvas {
 }
 
 #can-con {
-  max-width: none;
+  /*max-width: none;*/
 }
 
 @media (min-width: 400px) {
@@ -38,9 +38,7 @@ canvas {
     user-select: none;
 }
 .draw {
-    float:left;
-    width:220px;
-    height:285px;
+
     padding:10px;
 }
 
