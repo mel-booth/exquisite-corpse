@@ -2,47 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>draw</title>
+
+    <title>draw tag</title>
+
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/skeleton.css" rel="stylesheet" type="text/css">
-
   </head>
-  <body>
-    <div class="container">
-      <canvas id="paper" width="500" height="400"></canvas>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="three columns form-container">
-          <form id="tools">
-            <button type="submit" name="button">Pencil</button>
-            <button type="submit" name="button">Eraser</button>
-            <button type="submit" name="button">Clear</button>
-          </form>
+  <body onload="init()">
+    <!-- <div class="container"> -->
+      <div id="draw">
 
-          <form id="options">
-            <button type="submit" name="button">Cancel</button>
-            <button  onClick="saveCanvas();" id="Save">Done</button>
-          </form>
+        <div class="draw">
+          <canvas id="paper" height="300" width="400"></canvas>
+          <input type="submit" value="Draw" onclick="clearCanvas(canvas,ctx);">
+          <input type="submit" value="Erase" onclick="clearCanvas(canvas,ctx);">
+          <input type="submit" value="Clear" onclick="clearCanvas(canvas,ctx);">
 
-
-        </div>
-        <div class="nine columns gallery">
-
+          <input type="submit" value="Cancel" onclick="clearCanvas(canvas,ctx);">
+          <input type="submit" value="Done" onclick="saveCanvas()">
         </div>
 
-      </div>
+        <div class="canvas">
 
+        </div>
+      <!-- </div> -->
     </div>
-
-
-
-
-
-
   </body>
-  <script type="text/javascript" src='script/paper.js'></script>
+
+<!-- <script type="text/javascript" src='script/paper.js'></script> -->
+<script type="text/javascript" src='script/other.js'></script>
+
 
 </html>
+
+<!-- <button id="draw"><a href="#openModal">DRAW</a></button>
+  <div id="openModal" class="popupDraw">
+    <div>	<a href="#close" title="Close" class="close">X</a>
+      <h2>Draw something...</h2> -->

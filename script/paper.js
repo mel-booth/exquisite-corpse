@@ -1,48 +1,71 @@
-var canvas = document.getElementById('paper')
-var context = canvas.getContext('2d')
+var canvas, ctx
+var mouseX, mouseY, mouseDown = 0
 
-var images = []
-
-var mouse = {x: 0, y: 0};
-var test = document.createElement('img')
-test.src = "https://pixabay.com/static/uploads/photo/2015/10/01/21/39/background-image-967820_960_720.jpg"
-console.log('adding a test image');
-
-
-document.getElementById('Save').onclick=function(e){
-  e.preventDefault()
-  var img = canvas.toDataURL("image/png")
-  document.body.appendChild(test)
-  console.log(img);
+function draw(ctx,x,y,size) {
+  ctx.fillStyle = "#000000"
+  ctx.beginPath()
+  ctx.arc(x, y, size, 0, Math.PI*2, true)
+  ctx.closePath()
+  ctx.fill()
 }
+
+function clearCanvas(canvas,ctx) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+}
+
+function onMouseDown() {
+  mouseDown = 1
+  draw(ctx, mouseX, mouseY, 2)
+}
+
+function onMouseUp() {
+  mouseDown = 0
+}
+
+function onMouseMove(e) {
+  getMousePos(e)
+  if (mouseDown == 1) {
+      draw(ctx, mouseX, mouseY, 2)
+  }
+}
+
+function getMousePos(e) {
+  if (!e)
+      var e = event
+  if (e.offsetX) {
+      mouseX = e.offsetX
+      mouseY = e.offsetY
+  }
+  else if (e.layerX) {
+      mouseX = e.layerX
+      mouseY = e.layerY
+  }
+ }
+
+function init() {
+  canvas = document.getElementById('paper')
+  ctx = canvas.getContext('2d')
+  canvas.addEventListener('mousedown', onMouseDown, false)
+  canvas.addEventListener('mousemove', onMouseMove, false)
+  window.addEventListener('mouseup', onMouseUp, false)
+}
+
+
+// var images = []
+//
+// var test = document.createElement('img')
+// test.src = "https://pixabay.com/static/uploads/photo/2015/10/01/21/39/background-image-967820_960_720.jpg"
+// console.log('adding a test image');
+//
+// document.getElementById('Save').onclick=function(e){
+//   e.preventDefault()
+//   var img = canvas.toDataURL("image/png")
+//   document.body.appendChild(test)
+//   console.log(img);
+// }
 // 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAGQCAYAAABYs5LGAAAcvUlEQ…QIECBQIyDQa9yNSoAAAQIEUgUEeiqnYgQIECBAoEbg/wFWiy6vijmVoAAAAABJRU5ErkJggg=='
-
-
-canvas.addEventListener('mousemove', function(evt) {
-  mouse.x = evt.pageX - this.offsetLeft;
-  mouse.y = evt.pageY - this.offsetTop;
-  console.log(this.offsetTop, this.offsetLeft);
-}, false);
-
-context.lineWidth = 2;
-context.lineCap = 'round';
-context.strokeStyle = '#000000';
-
-canvas.addEventListener('mousedown', function(evt) {
-    context.beginPath();
-    context.moveTo(mouse.x, mouse.y);
-
-    canvas.addEventListener('mousemove', draw, false);
-}, false);
-
-canvas.addEventListener('mouseup', function() {
-    canvas.removeEventListener('mousemove', draw, false);
-}, false);
-
-var draw = function() {
-    context.lineTo(mouse.x, mouse.y);
-    context.stroke();
-}
+//
+//NO BUENO
 
 // document.getElementById('Save').onclick=function(e){
 //   e.preventDefault()
