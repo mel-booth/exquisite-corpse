@@ -4,7 +4,13 @@
   "description": "My own version of Cadavre Exquis.",
   "main": "index.js",
   "scripts": {
+    "start": "budo script/paper.js --live --port 4000",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,6 +28,8 @@
     "babelify": "^7.3.0",
     "budo": "^9.2.1",
     "hyperscript": "^2.0.2",
-    "morphdom": "^2.2.0"
+    "knex": "^0.12.6",
+    "morphdom": "^2.2.0",
+    "sqlite3": "^3.1.8"
   }
 }
