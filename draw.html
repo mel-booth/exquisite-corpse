@@ -10,7 +10,7 @@
     <link href="css/skeleton.css" rel="stylesheet" type="text/css">
   </head>
 
-  <body onload="init()">
+  <body >
 
     <button id="draw"><a href="#openModal">DRAW</a></button>
     <div id="gallery">
@@ -24,9 +24,10 @@
           <input type="submit" value="Erase" onclick="clearCanvas(canvas,ctx)">
           <input type="submit" value="Clear" onclick="clearCanvas(canvas,ctx)">
           <input type="submit" value="Cancel" onclick="clearCanvas(canvas,ctx)">
-          <input type="submit" value="Done" onclick="saveCanvas()">
+          <form class="save" action="draw.html" method="post">
+            <input type="submit" value="Done" id="save">
+          </form>
         </div>
-
       </div>
     </div>
   </body>

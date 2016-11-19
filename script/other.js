@@ -11,8 +11,6 @@ var x = "black",
 function init() {
     canvas = document.getElementById('paper');
     ctx = canvas.getContext("2d");
-    w = canvas.width;
-    h = canvas.height;
 
     canvas.addEventListener("mousemove", function (e) {
         findxy('move', e)
@@ -86,7 +84,7 @@ function findxy(res, e) {
     if (res == 'down') {
         prevX = currX;
         prevY = currY;
-        currX = e.clientX 
+        currX = e.clientX
         currY = e.clientY
 
         flag = true;
