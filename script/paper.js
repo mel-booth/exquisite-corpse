@@ -54,20 +54,3 @@ document.getElementById('save').onclick=function(e){
   document.body.appendChild(gallery)
   console.log(imgString)
 }
-
-
-//NO BUENO
-
-
-//To save images to images array - not working yet.
-// document.getElementById('Save').onclick=function(e){
-//   e.preventDefault()
-//   var img = canvas.toDataURL("image/png")
-//   images.push(img)
-// }
-
-// function convertCanvasToImage(canvas) {
-// var image = new Image();
-// image.src = canvas.toDataURL("image/png");
-// return image;
-// }
