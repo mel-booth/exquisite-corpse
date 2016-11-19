@@ -1,51 +1,30 @@
 Exquisite Corpse was originally a parlor game based on words. To play, each participant wrote a word or phrase on a piece of paper then folded it so that the next player could not see the previous contributions. This resulted in nonsensical phrases like “Le cadaver exquis boira le vin nouveau” (“The exquisite corpse will drink the new wine”), one enigmatic phrase after which the game was named. - MoMA.org
 
-1.
-  As a - player
-  I want to - be able to push a button
-  So that I can - select a drawing theme
+## User Stories
 
-2.
-  As a - player
-  I want to - be able to push a button
-  So that I can - choose a marker weight
+### 1.
+  As a user, I want to be able to push a button so that I can see the canvas.
 
-3.
-  As a - player
-  I want to - be able to push a button
-  So that I can - choose a marker colour
+### 2.
+  As a user, I want to be able to use my mouse so that I can draw a simple picture.
 
-4.
-  As a - player
-  I want to - be able to push a button
-  So that I can - mark my section as complete for the next user
+### 3.
+As a user, I want to be able to push a button so that I can clear the canvas to start drawing from scratch.
 
-5.
-  As a - player
-  I want to - be able to see a small portion of the previous players drawing
-  So that I can - use it as a reference to start my own drawing
+### 4.
+  As a user, I want to be able to push a button so that I can erase a particular part of my drawing.
 
-6.
-  As a - last player
-  I want to - be able to mark the canvas complete
-  So that I can - notify the other players that the drawing is complete
+### 5.
+  As a user, I want to be able to push a button so that I can save my image to the image gallery.
 
-7.
-  As a - player
-  I want to - be able to view the completed drawing
-  So that I can - see everyone's contributions
+### 6.
+  As a user, I want to be able to push a button so that I can go back to the image gallery if I change my mind.
 
-8.
-  As a - player
-  I want to - be able to push a button
-  So that I can - save the completed drawing
+### 7.
+  As a user, I want to be able to push a button so that I can share my drawing contribution.
 
-9.
-  As a - player
-  I want to - be able to push a button
-  So that I can - share the completed drawing to a social media channel
+### Stretch:
 
-10.
-  As a -
-  I want to -
-  So that I can -
+As a user, I want to be able to see the edges of the previous canvases so that I can connect my own drawing to theirs.
+As a user, I want to be able to push a button so that I can change the colour of my pencil.
+As a user, I want to be able to use a slider so that I can select the weight/size of the line for drawing.
