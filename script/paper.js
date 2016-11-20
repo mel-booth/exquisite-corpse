@@ -2,9 +2,13 @@ canvas = document.getElementById('paper')
 ctx = canvas.getContext('2d')
 
 var mouseX, mouseY, mouseDown = 0
+var x = 'black'
+var y = 2
 
 var draw = function() {
     ctx.lineTo(mouseX, mouseY)
+    ctx.strokeStyle = x
+    ctx.lineWidth = y
     ctx.stroke()
 }
 
@@ -30,6 +34,43 @@ function clearCanvas(canvas,ctx) {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
 }
 
+function colour(obj) {
+  switch (obj.id) {
+    case 'black':
+      x = 'black'
+      break
+    case 'green':
+      x = 'green'
+      break
+    case 'violet':
+      x = 'violet'
+      break
+    case 'orange':
+      x = 'orange'
+      break
+    case 'blue':
+      x = 'blue'
+      break
+    case 'grey':
+      x = 'grey'
+      break
+    case 'red':
+      x = 'red'
+      break
+    case 'yellow':
+      x = 'yellow'
+      break
+    case 'indigo':
+      x = 'indigo'
+      break
+    case 'white':
+      x = 'white'
+      break
+  }
+  if (x =='white') y = 15
+  else y = 2
+}
+
 function getMousePos(e) {
   if (!e)
     var e = event
@@ -46,7 +87,7 @@ function getMousePos(e) {
 var images = []
 document.getElementById('save').onclick=function(e){
   e.preventDefault()
-  var img = canvas.toDataURL("image/png")
+  var img = canvas.toDataURL("image/png", 1)
   var gallery = document.createElement('img')
   gallery.src = img
   images.push(img)
