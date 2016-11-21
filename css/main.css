@@ -1,25 +1,36 @@
 canvas {
-  border: 1px solid black;
-  border-radius: 10px
+  border: 0.5px solid black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.colours {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+
 }
 
-.row {
-  width: 100%;
-}
-@media (min-width: 400px) {
-  #can-con {
-    margin: 20px;
-  }
+.canvas-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+
 }
 
-@media (min-width: 550px) {
-  #can-con {
-    margin: 20px;
-  }
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
+
 .draw {
     padding:10px;
 }
+
 .popupDraw {
   position: fixed;
   top: 0;
