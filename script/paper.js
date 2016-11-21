@@ -1,5 +1,9 @@
+// var imagesDb = require('../db/images')
+
 canvas = document.getElementById('paper')
 ctx = canvas.getContext('2d')
+
+
 
 var mouseX, mouseY, mouseDown = 0
 var x = 'black'
@@ -87,11 +91,12 @@ function getMousePos(e) {
 var images = []
 document.getElementById('save').onclick=function(e){
   e.preventDefault()
-  var img = canvas.toDataURL("image/png", 1)
+  var img = canvas.toDataURL("image/png")
   var gallery = document.createElement('img')
   gallery.src = img
   images.push(img)
-  imgString = JSON.stringify(images)
+  // imagesDb.addImage(img)
+  // console.log(imagesDb.getImages)
+
   document.body.appendChild(gallery)
-  console.log(imgString)
 }
