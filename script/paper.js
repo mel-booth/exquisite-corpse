@@ -87,11 +87,9 @@ function getMousePos(e) {
 var images = []
 document.getElementById('save').onclick=function(e){
   e.preventDefault()
-  var img = canvas.toDataURL("image/png", 1)
+  var img = canvas.toDataURL("image/png")
   var gallery = document.createElement('img')
   gallery.src = img
   images.push(img)
-  imgString = JSON.stringify(images)
   document.body.appendChild(gallery)
-  console.log(imgString)
 }
