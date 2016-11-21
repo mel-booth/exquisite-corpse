@@ -11,35 +11,39 @@
   </head>
 
   <body>
-    <button id="draw"><a href="#openModal">DRAW</a></button>
+    <button id="draw"><a href="#modal">DRAW</a></button>
 
     <div id="gallery">
       <h1>ze gallery</h1>
     </div>
 
-      <div id="openModal" class="popupDraw">
+      <div id="modal" class="popupDraw">
         <div>	<a href="#close" title="Close" class="close">X</a>
+          <div class="colours">
+            <div id="black" onclick="colour(this)"></div>
+            <div id="green" onclick="colour(this)"></div>
+            <div id="violet" onclick="colour(this)"></div>
+            <div id="orange" onclick="colour(this)"></div>
+            <div id="blue" onclick="colour(this)"></div>
+            <div id="grey" onclick="colour(this)"></div>
+            <div id="red" onclick="colour(this)"></div>
+            <div id="yellow" onclick="colour(this)"></div>
+            <div id="indigo" onclick="colour(this)"></div>
+            <div id="white" onclick="colour(this)"></div>
+          </div>
 
-          <h2>Draw something...</h2>
+          <div class="canvas-con">
+            <canvas id="paper" height="300" width="400"></canvas>
+          </div>
 
-          <div id="black" onclick="colour(this)"></div>
-          <div id="green" onclick="colour(this)"></div>
-          <div id="violet" onclick="colour(this)"></div>
-          <div id="orange" onclick="colour(this)"></div>
-          <div id="blue" onclick="colour(this)"></div>
-          <div id="grey" onclick="colour(this)"></div>
-          <div id="red" onclick="colour(this)"></div>
-          <div id="yellow" onclick="colour(this)"></div>
-          <div id="indigo" onclick="colour(this)"></div>
-          <div id="white" onclick="colour(this)"></div>
-
-          <canvas id="paper" height="300" width="400"></canvas><br>
-
-          <input type="submit" value="Clear" onclick="clearCanvas(canvas,ctx)">
-
-          <form class="save" action="draw.html" method="post">
+          <div class="buttons">
             <input type="submit" value="Add to Gallery" id="save">
-          </form>
+            <input type="submit" value="Clear" onclick="clearCanvas(canvas,ctx)">
+          </div>
+
+          <!-- <form class="save" action="draw.html" method="post">
+          </form> -->
+
         </div>
       </div>
     </div>
